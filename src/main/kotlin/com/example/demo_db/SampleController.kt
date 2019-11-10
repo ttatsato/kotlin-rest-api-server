@@ -6,9 +6,12 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping
-class SampleController {
+class SampleController (var staffRepository: StaffRepository) {
+
     @GetMapping("/")
-    fun index () :String {
-        return "hello!"
+    fun index () :StaffEntity {
+
+        var staffList: List<StaffEntity> = staffRepository.findAll()
+        return staffList[0]
     }
 }
