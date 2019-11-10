@@ -1,0 +1,6 @@
+CREATE TABLE Staff(
+  id SERIAL,
+  name TEXT NOT NULL,
+  age INTEGER,
+  PRIMARY KEY (id)
+);

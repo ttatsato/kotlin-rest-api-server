@@ -10,7 +10,6 @@ class SampleController (var staffRepository: StaffRepository) {
 
     @GetMapping("/")
     fun index () :StaffEntity {
-
         var staffList: List<StaffEntity> = staffRepository.findAll()
         return staffList[0]
     }

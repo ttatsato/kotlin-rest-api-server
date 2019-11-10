@@ -1,0 +1,1 @@
+INSERT INTO Staff (name, age) VALUES ('test_user', 25);
