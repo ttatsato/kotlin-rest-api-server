@@ -6,11 +6,13 @@ import javax.persistence.Id
 import javax.persistence.Table
 
 @Entity
-@Table(name = "Staff")
-class StaffEntity {
+@Table(name = "article")
+class ArticleEntity {
     @Id
-    var id :Int = 0
+    @Column(name = "article_id")
+    var articleId :Int = 0
     @Column
-    var name = String()
+    var title = String()
+    var content = String()
 }
 
