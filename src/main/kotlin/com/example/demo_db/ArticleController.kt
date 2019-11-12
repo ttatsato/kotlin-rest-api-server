@@ -3,7 +3,7 @@ package com.example.demo_db
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping
+@RequestMapping("api")
 class ArticleController (var articleRepository: ArticleRepository) {
 
     @GetMapping("/")
