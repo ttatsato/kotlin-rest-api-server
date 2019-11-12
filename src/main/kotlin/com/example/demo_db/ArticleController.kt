@@ -12,6 +12,6 @@ class ArticleController (var articleRepository: ArticleRepository) {
     @GetMapping("/{id}")
     fun article (@PathVariable("id") id: Int) :ArticleEntity {
         var articles = articleRepository.findById(id)
-        return articles
+        return articles.get()
     }
 }
