@@ -7,11 +7,8 @@ import org.springframework.web.bind.annotation.*
 class ArticleController (var articleRepository: ArticleRepository) {
 
     @GetMapping("/")
-    fun index () :List<ArticleEntity> {return articleRepository.findAll()}
+    fun index () :List<ArticleEntity> = articleRepository.findAll()
 
     @GetMapping("/{id}")
-    fun article (@PathVariable("id") id: Int) :ArticleEntity {
-        var articles = articleRepository.findById(id)
-        return articles.get()
-    }
+    fun article (@PathVariable("id") id: Int) :ArticleEntity =  articleRepository.findById(id).get()
 }
