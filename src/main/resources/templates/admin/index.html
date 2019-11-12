@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html" />
+    <title>Getting Started: Saving Web Content/admin</title>
+</head>
+<body>
+<header>管理画面</header>
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>タイトル</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr th:each="article : ${articles}">
+            <td th:text="${article.articleId}"></td>
+            <td>
+                <a th:href="@{'/admin/edit/' + ${article.articleId}}"
+                   th:text="${article.title}"></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
